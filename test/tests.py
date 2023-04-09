@@ -1,8 +1,5 @@
-import sys
-import os
-
-from test.PeleaTest import PeleaTest
+from test import pelea_test
 
 if __name__ == "__main__":
-  PeleaTest.tests()
+  pelea_test.tests()
   print("Tests passed")
