@@ -16,11 +16,12 @@ if typing.TYPE_CHECKING:
     from models.eventos.Evento import Evento
     # Anotación TYPE_CHECKING para importar clases Arma y Evento únicamente para comprobación de tipos
 
+
 class Monstruo(metaclass=abc.ABCMeta):
-# Define clase abstracta Monstruo utiliza metaclase ABCMeta
+    # Define clase abstracta Monstruo utiliza metaclase ABCMeta
 
     def __init__(self, VidaMaxima: int, arma: "Arma", nombre: str):
-    # Constructor clase Monstruo recibe 3 argumentos: VidaMaxima  int, arma class y nombre str
+        # Constructor clase Monstruo recibe 3 argumentos: VidaMaxima  int, arma class y nombre str
 
         self.vidaMaxima = VidaMaxima
         self.arma = arma
@@ -44,8 +45,8 @@ class Monstruo(metaclass=abc.ABCMeta):
         # Resta cantidad puntos ataque del monstruo atacante valor vidaActual jugador receptor
 
         if self.vidaActual < 0:
-        # Si valor de vidaActual menor a 0, vidaActual es 0
-            
+            # Si valor de vidaActual menor a 0, vidaActual es 0
+
             self.vidaActual = 0
             # Garantiza que vidaActual jugador no sea negativa
 
@@ -53,17 +54,17 @@ class Monstruo(metaclass=abc.ABCMeta):
         # Invoca método morir() jugador receptor
 
     def atacar(self, monstruoReceptor: "Monstruo") -> None:
-    # Método atacar recibe argumento monstruoReceptor tipo Monstruo no devuelve valor
+        # Método atacar recibe argumento monstruoReceptor tipo Monstruo no devuelve valor
 
         monstruoReceptor.recibirDanmange(self)
         # Invoca método recibirDanmange() jugador receptor, pasando como argumento
         # El jugador receptor recibirá daño del monstruo atacante
 
     def morir(self) -> None:
-    # Método morir no recibe argumentos no devuelve valor
+        # Método morir no recibe argumentos no devuelve valor
 
         self.eventoObservable.on_next(JugadorMuere())
-        # El método on_next() del objeto eventoObservable 
+        # El método on_next() del objeto eventoObservable
         # Objeto JugadorMuere() como argumento
         # Esto indica que el jugador ha muerto notifica a los observadores registrados en el Observable
 

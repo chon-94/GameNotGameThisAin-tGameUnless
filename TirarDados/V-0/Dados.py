@@ -1,22 +1,34 @@
-import random  # Importamos la librería random para generar números aleatorios
+import random  # Genera números aleatorios
 
-# Función para tirar el dado y mostrar el resultado
-def tirar_dado(dado):
+def tirar_dado(dado): # Función dado muestra resultado
     resultado = random.randint(1, dado)
-    print("Resultado del dado " + str(dado) + " : " + str(resultado))
 
-# Solicitamos al usuario que ingrese el tipo de dado a tirar
-while True:
-    try:
-        dado = int(input("Ingrese el tipo de dado a tirar (4, 6, 8, 10, 12, 120): "))
-        if dado in [4 ,6 ,8 ,10 ,12 ,120 ]:
+    print(f"Resultado del dado {dado}: {resultado}")
+    # [[f-string]] imprime resultado de forma más clara y concisa.
+
+
+while True: # Genera Bucle
+
+    try:# try controla los errores en caso de que se ingrese un valor no numérico.
+        dado = int(
+            input("\nIngrese el tipo de dado a tirar (4, 6, 8, 10, 12, 120): "))
+
+        # Se cambia la condición para que sea más clara y concisa.
+        if dado in [4, 6, 8, 10, 12, 120]:
             tirar_dado(dado)
-        else:
-            print("ehhh si mira tienes que ingresar solo un mero que salga en la lista")
-    except ValueError:
-        print("perondon pero acabas de ingresar una letra...? ")
-    otra_vez = input("¿Otro intento? (si/no): ")
-    if otra_vez.lower() != 'si' and otra_vez.lower() != 's':
-        break
 
-    
+        else:  # Se agrega un else para mostrar un mensaje en caso de que se ingrese un valor no permitido.
+            print("\nehhh si mira tienes que ingresar solo un mero que salga en la lista")
+
+    except ValueError:  # Se agrega un except ValueError para controlar los errores en caso de que se ingrese un valor no numérico.
+        print("\nperondon pero acabas de ingresar una letra...? ")
+
+    otra_vez = input("""\n¿Otro intento? 
+escribe loque seapara continuar
+para salir pon (no): \n""")
+
+    # Se cambia la condición para que sea más clara y concisa.
+    if otra_vez.lower() != 'no' and otra_vez.lower() != 'n':
+        break
+    else:
+        break
