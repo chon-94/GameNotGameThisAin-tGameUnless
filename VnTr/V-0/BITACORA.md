@@ -15,6 +15,7 @@ con un metodo  (obtener estado )en el cual nos indica el estado
 
 Clase escenario 
 
+
 ddd
 ddd
 ddd
