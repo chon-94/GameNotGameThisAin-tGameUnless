@@ -1,15 +1,3 @@
-    
-class Personaje:
-    def __init__(self):
-        self.supervivencia = 0  # Atributo de instancia para la supervivencia, inicializado en 0.
-
-    def obtenerEstado(self):
-        return 'Supervivencia: ' + str(self.supervivencia)  # Retorna una cadena de texto con el valor actual de la supervivencia.
-
-        # Utiliza la sintaxis self.supervivencia para acceder al valor del atributo supervivencia de la instancia.
-        # El valor del atributo supervivencia se convierte a una cadena de texto con str() antes de concatenarse con la cadena 'Supervivencia: '.
-
-
 class Personaje:
     def __init__(self):
         self.supervivencia = 0
