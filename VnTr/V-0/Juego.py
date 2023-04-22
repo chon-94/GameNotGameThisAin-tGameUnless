@@ -10,7 +10,7 @@ final = False
 escenarios = {}
 
 
-with io.open('EscenariosPrincipales.txt', 'r', encoding='utf8') as archivo:
+with io.open('VnTr/V-0/EscenariosPrincipales.txt', 'r', encoding='utf8') as archivo:
 
     archivo.seek(0)
     contenido = archivo.read()

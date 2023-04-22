@@ -3,45 +3,6 @@ class Escenario:
         self.descripcion = descripcion
         self.opciones = opciones
         self.cambioSupervivencia = 0
-
-    def presentar(self, personaje):
-        print('\n')
-        print(personaje.obtenerEstado())
-        print(self.descripcion)
-
-        personaje.supervivencia += self.cambioSupervivencia
-
-        if personaje.supervivencia <= 0:
-            print("Has tomado una mala decisión y has muerto. Puedes intentarlo de nuevo.")
-            personaje.supervivencia = 0
-            return 'INICIO'
-
-        for i in range(len(self.opciones)):
-            print("[" + str(i) + "] " + self.opciones[i].descripcion)
-
-        error = True
-
-        while error:
-            eleccion = input()
-
-            if eleccion.isnumeric():
-                eleccion = int(eleccion)
-
-                if eleccion < len(self.opciones):
-                    error = False
-
-            if error:
-                print("¡Escribe el número de alguna de las opciones!")
-
-            if not error:
-                return self.opciones[eleccion].siguienteFragmento
-
-
-class Escenario:
-    def __init__(self, descripcion, opciones):
-        self.descripcion = descripcion
-        self.opciones = opciones
-        self.cambioSupervivencia = 0
         # Constructor de la clase "Escenario" que toma dos argumentos: "descripcion" y "opciones".
         # "descripcion" es un atributo de instancia que representa la descripción del escenario.
         # "opciones" es un atributo de instancia que representa las opciones disponibles en este escenario.
@@ -86,5 +47,3 @@ class Escenario:
             if not error:
                 return self.opciones[eleccion].siguienteFragmento
             # Si no hay errores, retorna el siguiente fragmento o paso correspondiente a la opción elegida, accediendo al atributo "siguienteFragmento" del objeto de opción seleccionado.
-
-    
