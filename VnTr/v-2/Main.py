@@ -1,24 +1,25 @@
-# Importamos la clase Jugador desde el archivo jugador.py
+from enemigo import Enemigo
 from jugador import Jugador
+from pelea import Pelea
+#from cargar import Tiempo
+#import time
 
-# Definimos la función main
-def main():
-    # Creamos una instancia de la clase Jugador
-    jugador = Jugador()
+class Main:
 
-    # Creamos una instancia de la clase Enemigo, pasando la vida del jugador como argumento
-    #enemigo = Enemigo(jugador.vida * 2)
+    def __init__(self):
+        self.jugador = Jugador()
+        self.enemigo = Enemigo(self.jugador.vida)
+        self.pelea   = Pelea(self.jugador,self.enemigo)
+        
+    def iniciar_juego(self):
 
-    # Llamamos al método asignar_puntos para que el jugador pueda asignar puntos a sus habilidades
-    jugador.asignar_puntos()
+        print("\n¡Comienza el juego!")
+        
+        self.jugador.asignar_puntos()
+        self.jugador.mostrar_habilidades()
+        self.enemigo.mostrar_habilidades()
+        self.pelea.iniciar_pelea()
+        
 
-    # Llamamos al método mostrar_habilidades para mostrar las habilidades del jugador
-    jugador.mostrar_habilidades()
-
-    # Mostramos la vida del enemigo
-    #enemigo.mostrar_vida()
-
-# Verificamos si este archivo se está ejecutando directamente, en lugar de ser importado como un módulo
-if __name__ == '__main__':
-    main()
-
+juego = Main()
+juego.iniciar_juego()
