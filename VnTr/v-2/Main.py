@@ -8,7 +8,7 @@ class Main:
 
     def __init__(self):
         self.jugador = Jugador()
-        self.enemigo = Enemigo(self.jugador.vida)
+        self.enemigo = Enemigo()
         self.pelea   = Pelea(self.jugador,self.enemigo)
         
     def iniciar_juego(self):

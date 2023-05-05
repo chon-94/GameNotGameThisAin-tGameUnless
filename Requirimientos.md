@@ -79,3 +79,34 @@ Jefes               25  pnts   75-99
 ## Destruccion
 
 ## Ilusion 
+
+
+# Armas
+ solo se puede tomar una
+
+## Baston 
+ bastón extensible formado por una rara aleacion de metales extraterrenales 
+ multiplica la magia * 3
+### Ataques
+Curacion            se usa solo 1 vez cura durante 3 turnos el primero cura 35 el diguiente cura 15 y el ultimo 10 al jugador
+Destruccion         se usa ilimitadamente causa 10 de daño al enemigo
+Ilusion             se usa solo 2 veces confunde al enemigo haciendo que ataque a una ilusion durante 2 turnos   
+Conjuracion         se usa solo 3 veces invoca a un espectro  que lo que hace es duplicar el daño de conjuracion
+
+## Lengua 
+ Lengua de plata de jeremias springfield
+ multiplica el carisma * 3 
+### Ataques
+Diplomacia          
+Escapar
+Insultos  
+
+## Espada
+ Blademaster's Sword
+ multiplica la fuerza * 3 
+### Ataques
+Hoja Aguada         se usa ilimitadamente causa 
+Viento Filudo       se usa ilimitadamente causa 
+Filo elemental      se usa ilimitadamente causa   
+machetazo al pecho  se usa ilimitadamente causa 
+ 

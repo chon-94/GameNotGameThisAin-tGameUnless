@@ -1,23 +1,22 @@
-class Jugador:
-    def __init__(self):
-        self.nombre = input("\nIngresa tu nombre:\n")
+class Personaje:
+
+    # Inicializa las variables del personaje
+    def __init__(self): 
+        self.nombre=input("\nIngresa tu nombre:\n")
         self.fuerza = 0
         self.inteligencia = 0
         self.carisma = 0
         self.experiencia = 0
-        self.calcular_nivel()
-        self.calcular_experiencia()
+        self.calulos_personaje()
 
-    def calcular_nivel(self):
+    # Calcula el nivel, experiencia y vida  tdo esto basado en sus habilidades    
+    def calulos_personaje(self):
         self.nivel = self.fuerza + self.inteligencia + self.carisma
-        self.vida = int ((self.fuerza*3.5 + self.inteligencia*2.5 + self.carisma*1.5)*\
-                         (self.nivel**self.fuerza)+\
-                          self.carisma+self.inteligencia)
-
-    def calcular_experiencia(self):
         self.experiencia = (self.nivel*100)+100
+        self.vida = int ((self.fuerza*3.5 + self.inteligencia*2.5 + self.carisma*1.5)*(self.nivel**self.fuerza)+self.carisma+self.inteligencia)
 
-    def asignar_puntos(self):
+    # Permite asignar puntos a las habilidades
+    def puntos_cif(self):
         print("\nAsigna puntos a tus hlabilidades (tienes 5 puntos):")
         print("1. Fuerza")
         print("2. Inteligencia")
@@ -40,10 +39,9 @@ class Jugador:
             else:
                 print("Opción inválida. Intenta de nuevo.")
 
-        self.calcular_nivel()
-        self.calcular_experiencia()
+        self.calulos_personaje()# Vuelva a hacer el calculo
 
-
+    # Muestra Los detalles del personaje
     def mostrar_habilidades(self):
         print("\nNombre:", self.nombre)
         print("Vida:", self.vida)
@@ -51,4 +49,4 @@ class Jugador:
         print("Carisma:", self.carisma)
         print("Inteligencia:", self.inteligencia)
         print("Experiencia:", self.experiencia)
-        print("Nivel:", self.nivel)
+        print("Nivel:", self.nivel,'\n')

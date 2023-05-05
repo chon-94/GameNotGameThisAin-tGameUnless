@@ -1,3 +1,0 @@
-
-
-Este código permite a un usuario tirar un dado de los valores 4, 6, 8, 10, 12 o 120. El código importa la librería random para generar números aleatorios. Luego se crea una función para tirar el dado y mostrar el resultado. Se solicita al usuario que ingrese el tipo de dado a tirar y se agrega un try-except para controlar los errores en caso de que se ingrese un valor no numérico. Si el usuario ingresa un valor permitido, se ejecuta la función para tirar el dado y mostrar el resultado. Si no, se muestra un mensaje indicando que solo puede ingresar valores permitidos. Finalmente, se le pregunta al usuario si desea realizar otro intento y si la respuesta es negativa, el programa finaliza.
