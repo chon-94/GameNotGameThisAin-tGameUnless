@@ -109,4 +109,23 @@ Hoja Aguada         se usa ilimitadamente causa
 Viento Filudo       se usa ilimitadamente causa 
 Filo elemental      se usa ilimitadamente causa   
 machetazo al pecho  se usa ilimitadamente causa 
- 
+
+
+
+me gustaria  crear una clase llamada opciones con un modulo que me permita escoger 4 opciones 
+
+la 1 opcion nos hara pelear durante 35 rondas con un enemigo que tendra un nombre generado automaticamente
+y su nombre tiene que ser una letra seguida por una vocal  
+sus estadisticas fuerza inteligencia y carisma seran al azar y a medida que avanzan las rondas las tendran mas altas las 
+estadisticas este modulo se llamara combate_muerte
+
+
+
+en cada pelea tendremos las opciones de atacar con fuerza, carisma, inteligencia y la otra opcion es salir
+
+
+
+
+
+
+
