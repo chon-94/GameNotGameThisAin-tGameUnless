@@ -9,8 +9,6 @@ class Personaje:#Jugador
         self.nivel=0
         self.vida=0
         self.calulos_personaje()
-        
-
 
     def calulos_personaje(self):
         self.nivel = self.fuerza + self.inteligencia + self.carisma
@@ -40,20 +38,6 @@ class Personaje:#Jugador
             else:
                 print("Opción inválida. Intenta de nuevo.")
 
-    # def curar(self, cantidad):
-    #     self.vida += 12
-    #     print(f"¡Te has curado {cantidad} puntos de vida!")
-
-    # def ataque_duradero(self, cantidad, duracion):
-    #     print(f"Has activado un ataque duradero que hará {cantidad} puntos de daño durante {duracion} turnos!")
-
-    # def aturdir_enemigo(self, duracion):
-    #     print(f"Has aturdido al enemigo durante {duracion} turnos. ¡No podrá atacarte!")
-
-    # def atacar_enemigo_especial(self, cantidad):
-    #     print(f"Has realizado un ataque especial al enemigo y le has infligido {cantidad + 15} puntos de daño!")
-
-
     def escoger_habilidad(self):
         print("\nEscoge un Item:")
         print("1. Espada Blademaster (multiplica la fuerza por 3)")
@@ -67,42 +51,15 @@ class Personaje:#Jugador
             self.habilidad_escogida = "Espada Blademaster"
             print("¡Tu fuerza ha sido multiplicada por 3!")
 
-            # # Actividad 1: Curación
-            # self.curar(30)
-            # # Actividad 2: Ataque duradero (3 turnos)
-            # self.ataque_duradero(20, 3)
-            # # Actividad 3: Aturdir al enemigo (3 turnos)
-            # self.aturdir_enemigo(3)
-            # # Actividad 4: Ataque con mensaje especial
-            # self.atacar_enemigo_especial(15)
-
         elif opcion == "2" or opcion.lower() == "bastón" or opcion.lower() == "bastón de paragons":
             self.inteligencia *= 3
             self.habilidad_escogida = "Bastón de Paragons"
             print("¡Tu inteligencia ha sido multiplicada por 3!")
 
-            # # Actividad 1: Curación
-            # self.curar(30)
-            # # Actividad 2: Ataque duradero (3 turnos)
-            # self.ataque_duradero(20, 3)
-            # # Actividad 3: Aturdir al enemigo (3 turnos)
-            # self.aturdir_enemigo(3)
-            # # Actividad 4: Ataque con mensaje especial
-            # self.atacar_enemigo_especial(15)
-
         elif opcion == "3" or opcion.lower() == "lengua" or opcion.lower() == "lengua de plata de jeremías springfield":
             self.carisma *= 3
             self.habilidad_escogida = "Lengua de plata de Jeremías Springfield"
             print("¡Tu carisma ha sido multiplicado por 3!")
-
-            # # Actividad 1: Curación
-            # self.curar(30)
-            # # Actividad 2: Ataque duradero (3 turnos)
-            # self.ataque_duradero(20, 3)
-            # # Actividad 3: Aturdir al enemigo (3 turnos)
-            # self.aturdir_enemigo(3)
-            # # Actividad 4: Ataque con mensaje especial
-            # self.atacar_enemigo_especial(15)
 
         else:
             print("Opción inválida. Intenta de nuevo.")
