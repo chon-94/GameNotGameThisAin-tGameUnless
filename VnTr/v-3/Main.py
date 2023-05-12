@@ -1,6 +1,6 @@
 # Importamos clases desde su propio módulo
-from personaje import Personaje
-from menu import Menu
+from Clases.personaje import Personaje
+from Clases.Menu.menu import Menu
 
 class Main:
 
