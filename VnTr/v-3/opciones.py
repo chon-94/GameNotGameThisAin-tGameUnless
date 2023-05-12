@@ -6,10 +6,9 @@ class Opciones:
 
     def combate_muerte(self):
         print("\nhola te moriras\n")
-        enemigo = Enemigo()
-        enemigo.mostrar_estadisticas()
+        enemigo = Enemigo(1)
+        enemigo.generar_combate_habilidad_aleatoria()
 
-        
     def combate_fuerza(self):
         print("\ncombate_fuerza\n")
         

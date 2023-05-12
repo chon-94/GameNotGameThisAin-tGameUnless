@@ -2,13 +2,26 @@ import random
 import string
 
 class Enemigo:
-    def __init__(self):
+    def __init__(self, tipo):
+        self.tipo = tipo
         self.nombre = self.generar_nombre()
+        self.fuerza = 0
+        self.carisma = 0
+        self.inteligencia = 0
+        self.nivel = 0
+        self.vida = 0
         
-        # Generamos las estadísticas aleatoriamente
-        self.inteligencia = random.randint(1, 6)
-        self.carisma = random.randint(1, 6)
-        self.fuerza = random.randint(1, 6)
+        if tipo == 1:
+            self.generar_combate_habilidad_aleatoria()
+        elif tipo == 2:
+            self.generar_combate_inteligencia_aleatoria()
+        elif tipo == 3:
+            self.generar_combate_carisma_aleatoria()
+        elif tipo == 4:
+            self.generar_combate_fuerza_aleatoria()
+        else:
+            pass
+        
         self.nivel = self.fuerza + self.inteligencia + self.carisma
         self.vida = int((self.fuerza * 1.5 + self.inteligencia * 1.5 + self.carisma * 1.5) * (self.nivel * self.fuerza) + self.carisma + self.inteligencia)
     
@@ -26,10 +39,29 @@ class Enemigo:
                 vocal = random.choice("aeiou")
                 nombre += vocal
         
-        nombre += "-" + str(random.randint(0, 5))
-        #nombre += "-" + random.choice(["0", "2", "3", "5", "6", "7", "9"])
+        nombre += "-" + str(random.randint(0, 9999))
         return nombre
     
+    def generar_combate_habilidad_aleatoria(self):
+        self.inteligencia = random.randint(1, 6)
+        self.carisma = random.randint(1, 6)
+        self.fuerza = random.randint(1, 6)
+
+    def generar_combate_inteligencia_aleatoria(self):
+        self.inteligencia = random.randint(3, 6)
+        self.carisma = random.randint(1, 2)
+        self.fuerza = random.randint(1, 2)    
+
+    def generar_combate_carisma_aleatoria(self):
+        self.inteligencia = random.randint(1, 2)
+        self.carisma = random.randint(3, 6)
+        self.fuerza = random.randint(1, 2)
+
+    def generar_combate_fuerza_aleatoria(self):
+        self.inteligencia = random.randint(1, 2)
+        self.carisma = random.randint(1, 2)
+        self.fuerza = random.randint(3, 6)
+
     def mostrar_estadisticas(self):
         estilo = {
             "negrita": "\033[1m",
@@ -41,9 +73,8 @@ class Enemigo:
             "reset": "\033[0m"
         }
         
-        print(f"\n{estilo['negrita']}Nombre:{estilo['reset']} {self.nombre}")
+        print(f"\n{estilo['negrita']}Tipo:{estilo['reset']} {self.tipo}")
+        print(f"{estilo['negrita']}Nombre:{estilo['reset']} {self.nombre}")
         print(f"{estilo['negrita']}Fuerza:{estilo['reset']} {self.fuerza}")
-        print(f"{estilo['negrita']}Carisma:{estilo['reset']} {self.carisma}")
-        print(f"{estilo['negrita']}Inteligencia:{estilo['reset']} {self.inteligencia}")
-        print(f"{estilo['negrita']}Vida:{estilo['reset']} {self.vida}")
-        print(f"{estilo['negrita']}Nivel:{estilo['reset']} {self.nivel}")
+        print(f"{estilo['negrita']}inteligencia:{estilo['reset']} {self.fuerza}")
+        print(f"{estilo['negrita']}carisma:{estilo['reset']} {self.fuerza}")

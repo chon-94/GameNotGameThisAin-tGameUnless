@@ -6,8 +6,8 @@ class Menu:
         print("\n¡Bienvenido al Menú de Opciones!")
         print("1. Combate a Muerte")
         print("2. Combate a Fuerza")
-        print("3. Combate a Magia")
-        print("4. Combate a Carisma")
+        print("3. Combate a Carisma ")
+        print("4. Combate a Inteligneca")
         print("5. Historia x")
         print("6. Salir")
 
